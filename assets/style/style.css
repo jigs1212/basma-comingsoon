@@ -65,6 +65,7 @@ content {
     font-family: Nexa-bold;
     text-transform: uppercase;
     font-weight: bold;
+    color: #f6b60b !important;
 }
 
 .description {
