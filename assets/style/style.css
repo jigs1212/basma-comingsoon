@@ -142,6 +142,18 @@ content {
     height: 60px;
 }
 
+
+@media (max-width: 480px) {
+    .logo{
+        height: 40px;
+        width: 40px;
+    }
+    .notify {
+        margin-top: 5%;
+    }
+}
+
+
 /* .dark .logo use{
     fill: #ffffff;
 }
@@ -315,6 +327,8 @@ input[type="submit"] {
     /* margin-left: -50px; */
     height: 40px;
     /* width: 20%; */
+    font-family: Nexa-light;
+    text-transform: capitalize;
     background: blue;
     color: white;
     border: unset;
@@ -323,6 +337,35 @@ input[type="submit"] {
     -webkit-box-shadow: 10px 10px 25px -15px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 25px -15px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 25px -15px rgba(0, 0, 0, 0.75);
+}
+
+
+@media (min-width: 320px) {
+    input[type="text"] {
+        width: 30%;
+        height: 40px;
+        margin-bottom: unset;
+    }
+
+    input[type="submit"] {
+        padding: 0 10px;
+        line-height: unset;
+        font-size: unset;
+    }
+
+}
+
+@media (min-width: 575px) {
+    input[type="text"] {
+        width: 30%;
+        height: 40px;
+        margin-bottom: unset;
+    }
+
+    input[type="submit"] {
+        line-height: unset;
+        font-size: unset;
+    }
 }
 
 
@@ -380,8 +423,22 @@ input[type="submit"] {
     }
     .social-media li>img {
         width: 20px;
+        height: 20px;
     }
 }
+
+@media (max-width: 768px) {
+    .social-media li>img {
+        width: 20px;
+        height: 20px;
+        padding-right: 10px;
+    }
+    content {
+        width: 50%;
+        padding: 0 0 100px;
+    }
+}
+
 
 /* 575
 â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
@@ -391,6 +448,7 @@ input[type="submit"] {
         width: 100%;
     }
     .social-media.home {
+        width: unset;
         text-align: left;
         padding-left: 25%;
     }
@@ -401,6 +459,9 @@ input[type="submit"] {
     }
     .social-media li.hidden-xs {
         display: none !important;
+    }
+    .social-media li.visible-xs {
+        display: block !important;
     }
     .social-media li span {
         display: inline-flex;
@@ -418,6 +479,7 @@ input[type="submit"] {
     }
     .social-media li>img {
         width: 20px;
+        height: 20px;
         padding-right: 20px;
     }
 }
