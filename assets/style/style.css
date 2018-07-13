@@ -88,6 +88,18 @@ content {
     margin-top: 90px;
 }
 
+@media (min-height: 320px) {
+    .wrapper{
+        min-height: 100%;
+        padding-top: 20%;
+        align-items: unset;
+    }
+    content{
+        width: 100%;
+        padding: 0;
+    }
+}
+
 @media (min-width: 480px) {
     content {
         width: 480px;
@@ -107,9 +119,7 @@ content {
 }
 
 @media (min-width: 768px) {
-    /* .wrapper {
-        padding: 100px 0 80px 0;
-    } */
+
     content {
         width: 50%;
         padding: 5% 0 10%;
@@ -229,7 +239,37 @@ content {
     fill: #505050;
 }
 
+
 @media (min-width: 320px) {
+
+    .social-media.home.hidden-xs{
+        display: none;
+    }
+
+    .social-media.home.visible-xs{
+        display: block;
+        bottom: unset;
+        padding-left: 25%;
+        width: unset;
+        margin-top: 10%;
+    }
+
+    .social-media.visible-xs li{
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .social-media li span {
+        display: inline-flex;
+        margin-bottom: 10px;
+    }
+    .social-media li span:not(:first-of-type) {
+        padding-left: 40px;
+    }
+
+
+    .social-media.visible-xs li{
+    }
     .social-media {
         text-align: left;
         /* padding-left: 20px; */
@@ -241,7 +281,25 @@ content {
     }
 }
 
+@media (min-width: 480px) {
+    .social-media.visible-xs{
+        padding-left: 30%;
+    }
+}
+
+@media (min-width: 600px) {
+    .social-media.visible-xs{
+        padding-left: 35%;
+    }
+}
+
 @media (min-width: 768px) {
+    .social-media.home.visible-xs{
+        display: none;
+    }
+    .social-media.home.hidden-xs{
+        display: block;
+    }
     .social-media {
         text-align: center !important;
     }
@@ -253,9 +311,6 @@ content {
         padding: 0 10px;
         width: 25px;
         height: 25px;
-    }
-    .social-media li.visible-xs {
-        display: none !important;
     }
 }
 
@@ -343,7 +398,7 @@ input[type="submit"] {
 
 @media (min-width: 320px) {
     input[type="text"] {
-        width: 40%;
+        width: 45%;
         height: 40px;
         margin-bottom: unset;
     }
@@ -420,9 +475,7 @@ input[type="submit"] {
         padding: 5px 0;
         margin: 0 auto;
     }
-    .social-media li.visible-xs {
-        display: none !important;
-    }
+
     .social-media li>img {
         width: 20px;
         height: 20px;
@@ -436,7 +489,7 @@ input[type="submit"] {
         padding-right: 10px;
     }
     content {
-        width: 50%;
+        width: 100%;
         padding: 0 0 100px;
     }
 }
@@ -446,7 +499,7 @@ input[type="submit"] {
 â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 
 @media (max-width: 575px) {
-    .wrapper{
+    /* .wrapper{
         align-items: unset;
         padding: 75px 0 50px 0;
     }
@@ -459,23 +512,12 @@ input[type="submit"] {
         padding-left: 20%;
     }
     .social-media {
-        text-align: left;
-        /* padding-left: 20px; */
-        /* width: 80% !important; */
-    }
-    .social-media li.hidden-xs {
-        display: none !important;
-    }
-    .social-media li.visible-xs {
-        display: block !important;
-    }
-    .social-media li span {
-        display: inline-flex;
-        margin-bottom: 10px;
-    }
-    .social-media li span:not(:first-of-type) {
-        padding-left: 40px;
-    }
+        text-align: left; */
+        /* padding-left: 20px;
+        width: 80% !important; */
+    /* }
+
+
     .social-media li {
         display: block !important;
         line-height: 20px;
@@ -487,7 +529,7 @@ input[type="submit"] {
         width: 20px;
         height: 20px;
         padding-right: 20px;
-    }
+    } */
 }
 
 
