@@ -71,7 +71,7 @@ content {
 .description {
     font-size: 14px;
     font-family: Nexa-light;
-    letter-spacing: .2em;
+    letter-spacing: .1em;
     /* margin-top: 32px; */
     margin-bottom: 0;
 }
@@ -357,6 +357,7 @@ input[type="submit"] {
 }
 
 @media (min-width: 575px) {
+
     input[type="text"] {
         width: 40%;
         height: 40px;
@@ -445,6 +446,10 @@ input[type="submit"] {
 â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 
 @media (max-width: 575px) {
+    .wrapper{
+        align-items: unset;
+        padding: 75px 0 50px 0;
+    }
     content {
         width: 100%;
     }
