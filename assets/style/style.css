@@ -343,7 +343,7 @@ input[type="submit"] {
 
 @media (min-width: 320px) {
     input[type="text"] {
-        width: 30%;
+        width: 40%;
         height: 40px;
         margin-bottom: unset;
     }
@@ -358,7 +358,7 @@ input[type="submit"] {
 
 @media (min-width: 575px) {
     input[type="text"] {
-        width: 30%;
+        width: 40%;
         height: 40px;
         margin-bottom: unset;
     }
