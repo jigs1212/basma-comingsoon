@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Al Basma General Services Co. W.L.L</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="assets/images/logo.ico" type="image/ico" sizes="16x16">
-		<link rel="stylesheet" href="assets/style/normalize.css">
-		<link rel="stylesheet" href="assets/style/utils.css">
-		<link rel="stylesheet" href="assets/style/font.css">
-		<link rel="stylesheet" href="assets/style/style.css">
-	</head>
-	<body class="light" data-mcs-theme="minimal-dark">
 
-		<div class="wrapper" id="content">
-			<content>
-				<img class="logo" src="./assets/images/logodxc.jpg" />
-				<p class="description">AL BASMA GENERAL SERVICES CO. W.L.L</p>
+<head>
+	<title>Al Basma General Services Co. W.L.L</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/images/logo.ico" type="image/ico" sizes="16x16">
+	<link rel="stylesheet" href="assets/style/normalize.css">
+	<link rel="stylesheet" href="assets/style/utils.css">
+	<link rel="stylesheet" href="assets/style/font.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+</head>
 
-				<h1 class="title">Stay Tuned</h1>
-				<p class="description">Our site is launching soon</p>
-				<!-- <button class="red space button" id="modalButon">CONTACT</button> -->
-				<div class="notify">
-					<input type="text" placeholder="email id"><input type="submit" value="Notify">
-				</div>
-				<ul class="social-media home visible-xs">
-					<li class="left"><img src="assets/images/1.png" alt="">info@basmagswll.com</li>
-					<li class="center"><img src="assets/images/2.png" alt=""><span>+974 4416 0117</span><br><span>+974 3143 0801</span><br><span>+974 3077 3243</span></li>
-					<li class="right "> <img src="assets/images/3.png" alt="" ><span>P.O Box : 2942,</span><br><span>Doha, Qatar</span></li>
-						<!-- <li>
+<body class="light" data-mcs-theme="minimal-dark">
+
+	<div class="wrapper" id="content">
+		<content>
+			<img class="logo" src="./assets/images/logodxc.jpg" />
+			<p class="description">AL BASMA GENERAL SERVICES CO. W.L.L</p>
+
+			<h1 class="title">Stay Tuned</h1>
+			<p class="description">Our site is launching soon</p>
+			<!-- <button class="red space button" id="modalButon">CONTACT</button> -->
+			<div class="notify">
+				<form onsubmit="return false;">
+					<input type="email" required placeholder="Email id" id="emailInput"><input type="submit" id="notify" value="Notify">
+				</form>
+			</div>
+			<ul class="social-media home visible-xs">
+				<li class="left"><img src="assets/images/1.png" alt="">info@basmagswll.com</li>
+				<li class="center"><img src="assets/images/2.png" alt=""><span>+974 4416 0117</span><br><span>+974 3143 0801</span><br><span>+974 3077 3243</span></li>
+				<li class="right "> <img src="assets/images/3.png" alt=""><span>P.O Box : 2942,</span><br><span>Doha, Qatar</span></li>
+				<!-- <li>
 							<svg class="icon">
 					  			<use xlink:href="assets/images/Fb_Ro.svg#icon"></use>
 							</svg>
@@ -46,13 +50,13 @@
 					  			<use xlink:href="assets/images/Be_Ro.svg#icon"></use>
 							</svg>
 						</li> -->
-				</ul>
-			</content>
-			<ul class="social-media home hidden-xs">
-				<li class="left"><img src="assets/images/1.png" alt="">info@basmagswll.com</li>
-				<li class="center"><img src="assets/images/2.png" alt=""> +974 4416 0117  / +974 3143 0801 / +974 3077 3243</li>
-				<li class="right"> <img src="assets/images/3.png" alt="" >P.O Box : 2942, Doha, Qatar</li>
-					<!-- <li>
+			</ul>
+		</content>
+		<ul class="social-media home hidden-xs">
+			<li class="left"><img src="assets/images/1.png" alt="">info@basmagswll.com</li>
+			<li class="center"><img src="assets/images/2.png" alt=""> +974 4416 0117 / +974 3143 0801 / +974 3077 3243</li>
+			<li class="right"> <img src="assets/images/3.png" alt="">P.O Box : 2942, Doha, Qatar</li>
+			<!-- <li>
 						<svg class="icon">
 				  			<use xlink:href="assets/images/Fb_Ro.svg#icon"></use>
 						</svg>
@@ -71,13 +75,37 @@
 				  			<use xlink:href="assets/images/Be_Ro.svg#icon"></use>
 						</svg>
 					</li> -->
-			</ul>
-		</div>
+		</ul>
+	</div>
 
-		<div class="overlay" id="overlay"></div>
+	<div class="overlay" id="overlay"></div>
 
-		<script src="assets/js/jquery.js"></script>
-		<script src="assets/js/jquery.validate.min.js"></script>
-		<script src="assets/js/form-validation.js"></script>
-	</body>
+	<script src="assets/js/jquery.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<!-- <script src="assets/js/form-validation.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#notify').click(function(event) {
+				/* Act on the event */
+
+				if ($('#emailInput').val() && validateEmail($('#emailInput').val())) {
+					console.log('help');
+					x = Math.floor((Math.random() * 5000) + 100);
+					console.log(x);
+					setTimeout(function() {
+						console.log("here");
+						// $('#notify').val('OK');
+						swal("Great!", "We will notify you when we are done.", "success");
+					}, x);
+				}
+			});
+		});
+		function validateEmail(email) {
+			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(email);
+		}
+	</script>
+</body>
+
 </html>
